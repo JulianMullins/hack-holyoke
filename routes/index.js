@@ -45,4 +45,7 @@ router.get('/profilePage', function(req, res, next) {
 	res.render('profilePage');
 })
 
+router.get('/detailTrip', function(req, res, next) {
+	res.render('detailTrip');
+})
 module.exports = router;
