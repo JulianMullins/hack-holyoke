@@ -87,4 +87,12 @@ router.get('/searchResPass', function(req, res, next) {
 	res.render('searchResPass');
 })
 
+router.get('/confirmation', function(req, res, next) {
+	res.render('confirmation');
+})
+
+router.get('/checkOut', function(req, res, next) {
+	res.render('checkOut');
+})
+
 module.exports = router;
