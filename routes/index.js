@@ -28,4 +28,11 @@ router.get('/pasOrDriver', function(req, res, next) {
 	res.render('pasOrDriver');
 })
 
+router.get('/startJourney', function(req, res, next) {
+	res.render('startJourney');
+})
+
+router.get('/profilePage', function(req, res, next) {
+	res.render('profilePage');
+})
 module.exports = router;
