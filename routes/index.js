@@ -52,4 +52,9 @@ router.get('/detailTrip', function(req, res, next) {
 router.get('/searchResDriver', function(req, res, next) {
 	res.render('searchResDriver');
 })
+
+router.get('/searchResPass', function(req, res, next) {
+	res.render('searchResPass');
+})
+
 module.exports = router;
