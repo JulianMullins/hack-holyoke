@@ -1,6 +1,36 @@
-<h1>Name: {{user.username}}</h1>
-<h1>E-mail: {{user.email}}</h1>
-<h1>School:</h1>
+<div class="profilePage">
+	<div class="goBack">
+		<i class="fa fa-angle-double-left fa-4x siteDarkBlue" aria-hidden="true"></i>
+	</div>
+
+	<div class="userDetails">
+		<div class="userPhoto">
+			<h2>profile photo</h2>
+		</div>
+		<h1 class="userName">{{user.username}}</h1>
+		<h1 class="userCollege">{{user.college}}</h1>
+		<h2 class="driverLink"><a href="signupDriver">Want to be a driver?</a></h2>
+	</div>
+
+	<div class="reviewsContainer">
+		<div class="review">
+			<p>Oct. 19, 2016</p>
+			<span>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<h3>Review title</h3>
+			</span>
+			<p>This is a review of this person...</p>
+		</div>
+	</div>	
+</div>
+
+
+
+<!-- <h1>E-mail: {{user.email}}</h1>
+
 <h1>Rating:</h1>
-<h1>Certified driver:</h1>
-<h1><a href="signupDriver">Want to be a driver?</a></h1>
+<h1>Certified driver: {{user.driver}}</h1> -->

@@ -4,7 +4,10 @@
 }
 
 body {
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font: 14px "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -15,6 +18,19 @@ h2 {
 	color: blue;
 }
 
+/* colors */
+
+.siteOrange {
+	color: #FF7D45;
+}
+
+.siteDarkBlue {
+	color: #203561;
+}
+
+.siteLightBlue {
+
+}
 
 /* navigation bar */
 
@@ -154,4 +170,84 @@ h2 {
 .vertForm a:hover {
 	transition-duration: 1s;
 	background-color: rgba(255,255,255,0.15);
+}
+
+/* profile page */
+
+.profilePage {
+	width: 100vw;
+	max-width: 960px;
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.goBack {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 10vw;
+}
+
+.userDetails {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	width: 40vw;
+}
+
+.userPhoto {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.6;
+	background-color: #FF7D45;
+	width: 250px;
+	height: 250px;
+}
+
+.userPhoto h2 {
+	font-weight: 300;
+	color: white;
+}
+
+.userName {
+	color: #FF7D45;
+	font-size: 36px;
+}
+
+.userCollege {
+	color: #203561;
+}
+
+.driverLink {
+	background-color: #FF7D45;
+	padding: 5px;
+}
+
+.driverLink a {
+	font-size: 18px;
+	font-weight: 300;
+	color: white;
+}
+
+.reviewsContainer {
+	width: 50vw;
+	background-color: #B8C5E3;
+	margin: 0px 25px;
+	padding: 10px;
+}
+
+.review {
+	display: flex;
+	flex-direction: column;
+}
+
+.review span {
+	display: flex;
+	align-items: center;
+}
+
+.review span h3 {
+	margin-left: 10px;
 }

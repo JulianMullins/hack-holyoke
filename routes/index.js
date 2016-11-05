@@ -22,7 +22,8 @@ router.post('/signupPass', function(req, res, next) {
 	var user = new User({
 		username: req.body.username,
 		email: req.body.email,
-		password: req.body.password		
+		password: req.body.password,
+		college: req.body.college
 	});
 	console.log('user: ', user);
 	user.save(function(error) {
