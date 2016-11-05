@@ -8,8 +8,20 @@ router.get('/', function(req, res, next) {
   res.render('index', {title: websiteTitle});
 });
 
+router.post('/', function(req, res, next) {
+	console.log("posting");
+	res.render('signupPass', {
+		from: req.body.location,
+		to: req.body.destination
+	});
+})
+
 router.get('/signupPass', function(req, res, next) {
-	res.render('signupPass', {title: websiteTitle});
+	res.render('signupPass', {
+		title: websiteTitle,
+		from: res.body.from,
+		to: res.body.to
+	});
 })
 
 router.get('/signupDriver', function(req, res, next) {
@@ -35,4 +47,5 @@ router.get('/startJourney', function(req, res, next) {
 router.get('/profilePage', function(req, res, next) {
 	res.render('profilePage');
 })
+
 module.exports = router;
