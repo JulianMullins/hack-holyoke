@@ -48,4 +48,8 @@ router.get('/profilePage', function(req, res, next) {
 router.get('/detailTrip', function(req, res, next) {
 	res.render('detailTrip');
 })
+
+router.get('/searchResDriver', function(req, res, next) {
+	res.render('searchResDriver');
+})
 module.exports = router;
