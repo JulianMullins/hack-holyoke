@@ -5,8 +5,22 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var session = require('express-session');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
+
+var mongoose = require('mongoose');
+var MongoStore = require('connect-mongo')(session);
+
+var connect = process.env.MONGODB_URI;
+mongoose.Promise = global.Promise
+mongoose.connect(connect);
+
+//models
+
+var model = require('./models/models');
+var User = model.User;
 
 var app = express();
 
@@ -24,6 +38,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+
+app.use(session({
+    secret: process.env.SECRET,
+    // name: 'Catscoookie',
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var models = require('../models/models');
+var User = models.User;
 
 var websiteTitle = 'College Rides';
 
@@ -9,13 +11,40 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	console.log("posting");
 	res.redirect('/startJourney');
 })
 
 router.get('/signupPass', function(req, res, next) {
 	res.render('signupPass');
 })
+
+router.post('/signupPass', function(req, res, next) {
+	var user = new User({
+		username: req.body.username,
+		email: req.body.email,
+		password: req.body.password		
+	});
+	console.log('user: ', user);
+	user.save(function(error) {
+		if(error) {
+			res.render('signupPass', {
+				error: error
+			});
+		} else {
+			res.redirect('/profilePage/' + user._id);
+		}
+	})
+})
+
+router.get('/profilePage/:id', function(req, res, next) {
+	console.log('req.params.id', req.params.id);
+	User.findById(req.params.id).exec(function(err, user) {
+		res.render('profilePage', {
+			user: user
+		});
+	})
+})
+
 
 router.get('/signupDriver', function(req, res, next) {
 	res.render('signupDriver', {title: websiteTitle});
@@ -39,10 +68,6 @@ router.get('/startJourney', function(req, res, next) {
 		from: req.body.from,
 		to: req.body.to
 	});
-})
-
-router.get('/profilePage', function(req, res, next) {
-	res.render('profilePage');
 })
 
 module.exports = router;

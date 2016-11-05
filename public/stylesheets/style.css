@@ -99,6 +99,8 @@ h2 {
 .homeBody input {
 	margin-right: 25px;
 	opacity: 0.4;
+	color: #FF7D45;
+	font-weight: 700;
 }
 
 .homeBody form p {
