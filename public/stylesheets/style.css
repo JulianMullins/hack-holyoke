@@ -1,8 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+	text-decoration: none;
+}
+
+h2 {
+	color: blue;
+}
+
+
+/* navigation bar */
+
+.navBar {
+	display: flex;
+	flex-direction: row;
+	background-color: grey;
+	width: 100vw;
+	height: 10vh;
+	padding: 25px 0 0 25px;
 }
