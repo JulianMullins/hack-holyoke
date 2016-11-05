@@ -8,8 +8,20 @@ router.get('/', function(req, res, next) {
   res.render('index', {title: websiteTitle});
 });
 
+router.post('/', function(req, res, next) {
+	console.log("posting");
+	res.render('signupPass', {
+		from: req.body.location,
+		to: req.body.destination
+	});
+})
+
 router.get('/signupPass', function(req, res, next) {
-	res.render('signupPass', {title: websiteTitle});
+	res.render('signupPass', {
+		title: websiteTitle,
+		from: res.body.from,
+		to: res.body.to
+	});
 })
 
 router.get('/signupDriver', function(req, res, next) {
@@ -26,6 +38,21 @@ router.get('/postRide', function(req, res, next) {
 
 router.get('/pasOrDriver', function(req, res, next) {
 	res.render('pasOrDriver');
+})
+
+
+
+router.post('/singleTournament/:id/newGame', function(req, res, next) {
+  console.log("Posting");
+  res.render('index', {
+    loggedIn: true,
+    op1: req.body.op1,
+    op2: req.body.op2,
+    teamid1: req.body.teamid1,
+    teamid2: req.body.teamid2,
+    tourId: req.params.id
+
+  });
 })
 
 module.exports = router;
