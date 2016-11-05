@@ -75,6 +75,10 @@ router.get('/profilePage', function(req, res, next) {
 	res.render('profilePage');
 })
 
+router.get('/feed', function(req, res, next) {
+	res.render('feed');
+})
+
 router.get('/detailTrip', function(req, res, next) {
 	res.render('detailTrip');
 })
