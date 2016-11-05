@@ -45,6 +45,7 @@ h2 {
 	list-style: none;
 	display: inline-block;
 	margin-right: 10px;
+	text-transform: uppercase;
 }
 
 .navBar li a {
@@ -68,4 +69,40 @@ h2 {
 .homeBody h1, .homeBody h2 {
 	color: white;
 	font-size: 48px;
+}
+
+.headerText {
+	width: 50vw;
+	text-align: center;
+	line-height: 1.1;
+}
+
+.topHeader {
+	font-weight: 400;
+	font-size: 112px !important;
+	text-transform: uppercase;
+}
+
+.bottomHeader {
+	font-weight: 400;
+	font-size: 100%;
+	text-transform: uppercase;
+	padding-bottom: 25px;
+}
+
+.homeBody form {
+	display: flex;
+    justify-content: center;
+    width: 75vw;
+}
+
+.homeBody input {
+	margin-right: 25px;
+	opacity: 0.4;
+}
+
+.homeBody form p {
+	color: white;
+	padding-right: 10px;
+	text-transform: uppercase;
 }
