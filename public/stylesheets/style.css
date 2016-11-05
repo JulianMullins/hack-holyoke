@@ -21,15 +21,43 @@ h2 {
 .navBar {
 	display: flex;
 	flex-direction: row;
-	background-color: grey;
+	background-color: #FF7D45;
 	width: 100vw;
 	height: 10vh;
-	padding: 25px 0 0 25px;
+}
+
+.navBar h2 {
+	display: flex;
+	align-items: center;
+	color: white;
+	width: 40vw;
+	padding-left: 20px;
+}
+
+.navBar ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 60vw;
+}
+
+.navBar li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.navBar li a {
+	color: white;
 }
 
 /*homepage body */
 
 .homeBody {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	width: 100vw;
 	height: 90vh;
 	background-image: url("../images/homeBack.jpg");
@@ -37,7 +65,7 @@ h2 {
 	background-repeat: no-repeat;
 }
 
-.homeBody h1 {
+.homeBody h1, .homeBody h2 {
 	color: white;
 	font-size: 48px;
 }
