@@ -10,18 +10,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 	console.log("posting");
-	res.render('signupPass', {
-		from: req.body.location,
-		to: req.body.destination
-	});
+	res.redirect('/startJourney');
 })
 
 router.get('/signupPass', function(req, res, next) {
-	res.render('signupPass', {
-		title: websiteTitle,
-		from: res.body.from,
-		to: res.body.to
-	});
+	res.render('signupPass');
 })
 
 router.get('/signupDriver', function(req, res, next) {
@@ -41,7 +34,11 @@ router.get('/pasOrDriver', function(req, res, next) {
 })
 
 router.get('/startJourney', function(req, res, next) {
-	res.render('startJourney');
+	res.render('startJourney', {
+		title: websiteTitle,
+		from: req.body.from,
+		to: req.body.to
+	});
 })
 
 router.get('/profilePage', function(req, res, next) {
