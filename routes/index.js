@@ -24,4 +24,8 @@ router.get('/postRide', function(req, res, next) {
 	res.render('postRide', {title: websiteTitle});
 })
 
+router.get('/pasOrDriver', function(req, res, next) {
+	res.render('pasOrDriver');
+})
+
 module.exports = router;
