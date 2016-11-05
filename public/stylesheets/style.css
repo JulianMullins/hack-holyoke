@@ -127,6 +127,15 @@ h2 {
 	width: 75vw;
 }
 
+.vertForm input {
+	font-size: 24px;
+	width: 25vw;
+	margin-right: 0;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
 .vertForm a {
 	font-weight: 700;
 	width: 25vw;
