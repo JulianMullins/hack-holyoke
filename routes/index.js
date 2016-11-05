@@ -40,19 +40,12 @@ router.get('/pasOrDriver', function(req, res, next) {
 	res.render('pasOrDriver');
 })
 
+router.get('/startJourney', function(req, res, next) {
+	res.render('startJourney');
+})
 
-
-router.post('/singleTournament/:id/newGame', function(req, res, next) {
-  console.log("Posting");
-  res.render('index', {
-    loggedIn: true,
-    op1: req.body.op1,
-    op2: req.body.op2,
-    teamid1: req.body.teamid1,
-    teamid2: req.body.teamid2,
-    tourId: req.params.id
-
-  });
+router.get('/profilePage', function(req, res, next) {
+	res.render('profilePage');
 })
 
 module.exports = router;
